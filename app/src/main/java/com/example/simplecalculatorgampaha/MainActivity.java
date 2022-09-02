@@ -24,16 +24,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculate(View v){
+
+        String tag = v.getTag().toString();
+
         String value1 = txtValue1.getText().toString();
         String value2 = txtValue2.getText().toString();
 
         double v1 = Double.parseDouble(value1);
         double v2 = Double.parseDouble(value2);
 
-        double ans = v1 + v2;
+        double ans = 0;
+
+        switch (tag){
+            case "add": ans = v1 + v2; break;
+            case "sub": ans = v1 - v2; break;
+            case "mul": ans = v1 * v2; break;
+            case "div": ans = v1 / v2; break;
+        }
 
         lblAnswer.setText("Answer is: " + ans);
     }
-
-
 }
