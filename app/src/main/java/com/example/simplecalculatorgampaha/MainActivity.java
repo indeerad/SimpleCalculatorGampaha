@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         lblAnswer = findViewById(R.id.lblAsnwer);
     }
 
-    public void add(View v){
+    public void calculate(View v){
         String value1 = txtValue1.getText().toString();
         String value2 = txtValue2.getText().toString();
 
@@ -35,49 +35,5 @@ public class MainActivity extends AppCompatActivity {
         lblAnswer.setText("Answer is: " + ans);
     }
 
-    public void sub(View v){
-
-        // Step 2: get required values from above saved elements
-        String value1 = txtValue1.getText().toString();
-        String value2 = txtValue2.getText().toString();
-
-        double v1 = Double.parseDouble(value1);
-        double v2 = Double.parseDouble(value2);
-
-        double ans = v1 - v2;
-
-        // Step 3: Show the answer on the lblAnswer
-        lblAnswer.setText("Answer is: " + ans);
-    }
-
-    public void mul(View v){
-
-        // Step 2: get required values from above saved elements
-        String value1 = txtValue1.getText().toString();
-        String value2 = txtValue2.getText().toString();
-
-        double v1 = Double.parseDouble(value1);
-        double v2 = Double.parseDouble(value2);
-
-        double ans = v1 * v2;
-
-        // Step 3: Show the answer on the lblAnswer
-        lblAnswer.setText("Answer is: " + ans);
-    }
-
-    public void div(View v){
-
-        // Step 2: get required values from above saved elements
-        String value1 = txtValue1.getText().toString();
-        String value2 = txtValue2.getText().toString();
-
-        double v1 = Double.parseDouble(value1);
-        double v2 = Double.parseDouble(value2);
-
-        double ans = v1 / v2;
-
-        // Step 3: Show the answer on the lblAnswer
-        lblAnswer.setText("Answer is: " + ans);
-    }
 
 }
